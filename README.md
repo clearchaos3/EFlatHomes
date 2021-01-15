@@ -1,0 +1,2 @@
+# E Flat Homes
+[EFlathomes.com](https://eflathomes.com), a professional landing page for direct mail and online advertising leads, for a wholesale cash-for-homes business. I designed the site in AdobeXD, then created it from scratch using [Create React App](https://github.com/facebook/create-react-app), [MATERIAL-UI](https://material-ui.com), and [EmailJS](https://www.emailjs.com). It is currently hosted on [Netlify](https://www.netlify.com/), which is ideal for a small business single page application with low traffic (free in this case), and makes deployments very easy.
