@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { darkTheme } from './theme'
-import ContactUs from './ContactForm'
-import Logo from './Logo'
-import Copy from './Copy'
-//import Testimonials from './Testimonials'
-import Footer from './Footer'
 import './App.css';
+const Logo = lazy(() => import('./Logo'))
+const Copy = lazy(() => import('./Copy'))
+const ContactUs = lazy(() => import('./ContactForm'))
+const Footer = lazy(() => import('./Footer'))
+const renderLoader = () => <div></div>;
 
 function App() {
   const appliedTheme = createMuiTheme(darkTheme)
-
 
   return (
     <div className="background">
@@ -23,13 +22,16 @@ function App() {
           <ThemeProvider theme={appliedTheme}>
           <CssBaseline />
             <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');</style>
+            <Suspense fallback={renderLoader()}>
             <Logo />
-            <ContactUs />
+              <ContactUs />
+              <br></br>
+              <Copy />
+              {/* <Testimonials /><br></br> */}
+              <Logo />
+              <Footer />
+            </Suspense>
             <br></br>
-            <Copy />
-            {/* <Testimonials /><br></br> */}
-            <Logo />
-            <Footer /><br></br>
           </ThemeProvider>
         </div>
       </Container>
