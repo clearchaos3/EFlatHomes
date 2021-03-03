@@ -20,6 +20,14 @@ export default function ContactUs() {
     setUserAddress(e.target.value);
   };
 
+  const google = window.google;
+  const searchInput = 'propertyAddress';
+
+  let autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+      types: ['geocode'],
+      componentRestrictions: {country: "USA"}
+  });
+
   function sendEmail(e) {
     e.preventDefault();
     if (userName.length > 0 && userAddress.length > 0){
@@ -48,7 +56,7 @@ export default function ContactUs() {
     <div>
     <form className="contact-form dark" noValidate onSubmit={sendEmail} >
       <TextField name="user_name" label="Name" variant="filled" className="input" error={!userName} helperText={userName ? "" : "Please provide your name."} onChange={handleName} style={{fontFamily: "'Quicksand','sans-serif"}} /><br></br>
-      <TextField name="user_address" label="Property Address" variant="filled" className="input" error={!userAddress} helperText={userAddress ? "" : "Please provide the property address."} onChange={handleAddress} /><br></br>
+      <TextField name="user_address" label="Property Address" variant="filled" id="propertyAddress" className="input" error={!userAddress} helperText={userAddress ? "" : "Please provide the property address."} onChange={handleAddress} /><br></br>
       <TextField name="user_email" label="Email" variant="filled" className="input" /><br></br>
       <TextField name="user_phone" label="Phone Number" variant="filled" className="input" /><br></br>
       <TextField name="user_message" label="Message (Optional)" variant="filled" className="input" multiline /><br></br><br></br>

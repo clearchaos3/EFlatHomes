@@ -139,3 +139,7 @@ img {
 .footer > Button > Link {
   font-size: 40px;
 }
+
+#map {
+  height: 100%;
+}
