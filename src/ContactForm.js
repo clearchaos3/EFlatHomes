@@ -23,6 +23,7 @@ export default function ContactUs() {
   const google = window.google;
   const searchInput = 'propertyAddress';
 
+  // eslint-disable-next-line
   let autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
       types: ['geocode'],
       componentRestrictions: {country: "USA"}
