@@ -27,7 +27,7 @@ function App() {
               <ContactUs />
               <br></br>
               <Copy />
-              {/* <Testimonials /><br></br> */}
+              {/* <Testimonials /> */}
               <Logo />
               <Footer />
             </Suspense>

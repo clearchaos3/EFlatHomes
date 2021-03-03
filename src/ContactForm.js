@@ -3,7 +3,6 @@ import emailjs from 'emailjs-com';
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button'
 
-
 export default function ContactUs() {
 
   const [userName, setUserName] = useState([]);
@@ -45,7 +44,6 @@ export default function ContactUs() {
     }
   }
 
-
   return (
     <div>
     <form className="contact-form dark" noValidate onSubmit={sendEmail} >
@@ -56,7 +54,6 @@ export default function ContactUs() {
       <TextField name="user_message" label="Message (Optional)" variant="filled" className="input" multiline /><br></br><br></br>
       <Button variant="contained" color="secondary" style={{fontSize:25, color:'white', fontFamily:"'Quicksand','sans-serif'", fontWeight: '700'}} type="submit" value="Send" disabled={formSuccess} >{renderSuccess()}</Button><br></br>
     </form>
-    
     </div>
   );
 }
