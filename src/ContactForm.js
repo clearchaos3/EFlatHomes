@@ -7,6 +7,7 @@ export default function ContactUs() {
 
   const [userName, setUserName] = useState([]);
   const [userAddress, setUserAddress] = useState([]);
+  const [userEmail, setUserEmail] = useState([]);
   const [formSuccess, setFormSuccess] = useState(false);
 
   const serviceID = process.env.REACT_APP_SERVICE_ID
@@ -18,6 +19,9 @@ export default function ContactUs() {
   };
   const handleAddress = (e) => {
     setUserAddress(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setUserEmail(e.target.value);
   };
 
   const google = window.google;
@@ -31,7 +35,7 @@ export default function ContactUs() {
 
   function sendEmail(e) {
     e.preventDefault();
-    if (userName.length > 0 && userAddress.length > 0){
+    if (userName.length > 0 && userAddress.length > 0 && userEmail.length > 0){
       emailjs.sendForm(serviceID, templateID, e.target, userID)
         .then((result) => {
             console.log(result.text);
@@ -41,7 +45,7 @@ export default function ContactUs() {
       e.target.reset();
       setFormSuccess(true);
     }else {
-      alert('Please enter both Name and Property Address')
+      alert('All fields are required.')
     }
   }
 
@@ -58,7 +62,7 @@ export default function ContactUs() {
     <form className="contact-form dark" noValidate onSubmit={sendEmail} >
       <TextField name="user_name" label="Name" variant="filled" className="input" error={!userName} helperText={userName ? "" : "Please provide your name."} onChange={handleName} style={{fontFamily: "'Quicksand','sans-serif"}} /><br></br>
       <TextField name="user_address" label="Property Address" variant="filled" id="propertyAddress" className="input" error={!userAddress} helperText={userAddress ? "" : "Please provide the property address."} onChange={handleAddress} /><br></br>
-      <TextField name="user_email" label="Email" variant="filled" className="input" /><br></br>
+      <TextField name="user_email" label="Email" variant="filled" className="input" error={!userEmail} helperText={userEmail ? "" : "Please provide your email address."} onChange={handleEmail}/><br></br>
       {/* <TextField name="user_phone" label="Phone Number" variant="filled" className="input" /><br></br> */}
       {/* <TextField name="user_message" label="Message (Optional)" variant="filled" className="input" multiline /><br></br><br></br> */}
       <Button variant="contained" color="secondary" style={{fontSize:25, color:'white', fontFamily:"'Quicksand','sans-serif'", fontWeight: '700'}} type="submit" value="Send" disabled={formSuccess} >{renderSuccess()}</Button><br></br>

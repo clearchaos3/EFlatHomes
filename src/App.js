@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { darkTheme } from './theme'
 import './App.css';
 const Logo = lazy(() => import('./Logo'))
+const LogoBottom = lazy(() => import('./LogoBottom'))
 const Copy = lazy(() => import('./Copy'))
 const ContactUs = lazy(() => import('./ContactForm'))
 const Footer = lazy(() => import('./Footer'))
@@ -28,7 +29,7 @@ function App() {
               <br></br>
               <Copy />
               {/* <Testimonials /> */}
-              <Logo />
+              <LogoBottom />
               <Footer />
             </Suspense>
             <br></br>
