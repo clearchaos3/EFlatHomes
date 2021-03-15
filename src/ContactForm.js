@@ -49,7 +49,7 @@ export default function ContactUs() {
     if(formSuccess) {
       return <div>Request Sent! <span role="img" aria-label="green check mark">✅</span></div>
     } else {
-      return <div>Request Quote <span role="img" aria-label="money bag">💰</span></div>
+      return <div>Get My Quote <span role="img" aria-label="money bag">🏠</span></div>
     }
   }
 
@@ -59,8 +59,8 @@ export default function ContactUs() {
       <TextField name="user_name" label="Name" variant="filled" className="input" error={!userName} helperText={userName ? "" : "Please provide your name."} onChange={handleName} style={{fontFamily: "'Quicksand','sans-serif"}} /><br></br>
       <TextField name="user_address" label="Property Address" variant="filled" id="propertyAddress" className="input" error={!userAddress} helperText={userAddress ? "" : "Please provide the property address."} onChange={handleAddress} /><br></br>
       <TextField name="user_email" label="Email" variant="filled" className="input" /><br></br>
-      <TextField name="user_phone" label="Phone Number" variant="filled" className="input" /><br></br>
-      <TextField name="user_message" label="Message (Optional)" variant="filled" className="input" multiline /><br></br><br></br>
+      {/* <TextField name="user_phone" label="Phone Number" variant="filled" className="input" /><br></br> */}
+      {/* <TextField name="user_message" label="Message (Optional)" variant="filled" className="input" multiline /><br></br><br></br> */}
       <Button variant="contained" color="secondary" style={{fontSize:25, color:'white', fontFamily:"'Quicksand','sans-serif'", fontWeight: '700'}} type="submit" value="Send" disabled={formSuccess} >{renderSuccess()}</Button><br></br>
     </form>
     </div>

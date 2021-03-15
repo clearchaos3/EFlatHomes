@@ -143,3 +143,7 @@ img {
 #map {
   height: 100%;
 }
+
+Button {
+  margin-top: 10px !important;
+}
