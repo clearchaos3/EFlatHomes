@@ -132,18 +132,15 @@ img {
   font-size: calc(6px + 2vmin);
 }
 
-.footer {
-  font-weight: 900;
-}
-
-.footer > Button > Link {
-  font-size: 40px;
-}
-
-#map {
-  height: 100%;
-}
-
 Button {
   margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.footer {
+  background-color: RGBA(0, 0, 0, 0.3);
+  width: 100vw;
+}
+.footer > Button {
+  font-size: 18px;
 }

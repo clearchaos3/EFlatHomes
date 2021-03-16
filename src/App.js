@@ -32,7 +32,6 @@ function App() {
               <LogoBottom />
               <Footer />
             </Suspense>
-            <br></br>
           </ThemeProvider>
         </div>
       </Container>
