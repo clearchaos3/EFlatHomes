@@ -4,7 +4,7 @@ export default function LogoBottom() {
     return (
         <div>
         <div className="logo eb">E Flat Homes</div>
-        <div className="slogan">Cash for your home, today.</div>
+        <div className="slogan">🏡 We Buy Homes, Cash 💰</div>
         <br></br>
         </div>
     )

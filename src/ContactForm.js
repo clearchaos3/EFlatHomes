@@ -62,7 +62,8 @@ export default function ContactUs() {
   }
 
   return (
-    <div>
+    <div className="contact-card">
+    <div className="card-header"><div className="slogan2">Get a Free, No Obligation Cash Offer For Your Home! ⤵️</div></div>
     <form className="contact-form dark" noValidate onSubmit={sendEmail} >
       <TextField name="user_name" label="Name" variant="filled" className="input" error={!userName} helperText={userName ? "" : "Please provide your name."} onChange={handleName} style={{fontFamily: "'Quicksand','sans-serif"}} /><br></br>
       <TextField name="user_address" label="Property Address" variant="filled" id="propertyAddress" className="input" error={!userAddress} helperText={userAddress ? "" : "Please provide the property address."} onChange={handleAddress} /><br></br>

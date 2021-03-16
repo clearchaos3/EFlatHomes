@@ -84,14 +84,22 @@ img {
 
 .slogan {
   font-weight: 900;
-  font-size: 30px;
+  font-size: 24px;
   color: #ff9241;
 }
+
+.slogan2 {
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;
+}
+
 
 .contact-form {
   min-width: 350px;
   /* background-color: #555; */
   border-radius: 10px;
+  padding: 20px;
 }
 
 .input {
@@ -143,4 +151,16 @@ Button {
 }
 .footer > Button {
   font-size: 18px;
+}
+
+.contact-card {
+  background-color: #444;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px RGBA(0, 0, 0, 0.3);
+}
+
+.card-header {
+  background-color: #27ae60;
+  border-radius: 12px 12px 0px 0px;
+  padding: 20px;
 }
