@@ -5,14 +5,14 @@ import Button from '@material-ui/core/Button';
 export default function Footer() {
     return (
         <div className="footer">
-            <Button color="secondary" style={{fontFamily: "'Quicksand','sans-serif'", fontWeight: 700}}>
+            <Button color="secondary" style={{ fontFamily: "'Quicksand','sans-serif'", fontWeight: 700 }}>
                 <Link href="mailto:eric@eflathomes.com" color="secondary"><span role="img" aria-label="">📧</span> Eric@EFlatHomes.com</Link>
             </Button>
-            <Button color="secondary" style={{fontFamily: "'Quicksand','sans-serif'", fontWeight: 700}}>
+            <Button color="secondary" style={{ fontFamily: "'Quicksand','sans-serif'", fontWeight: 700 }}>
                 <Link href="tel:636-542-0404" color="secondary"><span role="img" aria-label="phone">☎️</span> (636) 542-0404</Link>
             </Button>
-            <Button color="secondary" style={{fontFamily: "'Quicksand','sans-serif'", fontWeight: 700}}>
-                <Link href="https://goo.gl/maps/w6Rv62QLXhxv8niu7" target="_blank" color="secondary"><span role="img" aria-label="address">🏢</span> 1395 Jungermann Rd Suite E, St. Peters, MO 63376</Link>
+            <Button color="secondary" style={{ fontFamily: "'Quicksand','sans-serif'", fontWeight: 700 }}>
+                <Link href="https://goo.gl/maps/w6Rv62QLXhxv8niu7" target="_blank" color="secondary"><span role="img" aria-label="address">🏢</span> 3 Front Street, Troy MO 63379</Link>
             </Button>
         </div>
     )
